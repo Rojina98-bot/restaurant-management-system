@@ -1,0 +1,26 @@
+
+[{
+    "id":1,
+    "name":"Lasangna Alle Verdure",
+    "src":"assets/img/touchOfItaly/LasangnaAlleVerdure.jpeg",
+    "des":"Oven baked layers of fresh potato with cheese, tomato and seasonal vegetables"
+    ,
+    "price":685
+},
+{
+    "id":2,
+    "name":"Lasagna Bolognese",
+    "src":"assets/img/touchOfItaly/lasagnaBolognese.jpeg",
+    "des":"Oven baked layers of fresh potato with cheese, tomato and seasonal vegetables"
+    ,
+    "price":685
+},
+{
+    "id":3,
+    "name":"Spaghetti/ Penne Pasta",
+    "src":"assets/img/touchOfItaly/spaghetti.jpeg",
+    "des":"Choice of carbona, Arabbiato or chicken Bolonoise server with garlic bread "
+    ,
+    "price":685
+}
+]

@@ -1,0 +1,75 @@
+[
+    {
+        "id":1,
+        "name":"Veg Platter",
+        "src":"assets/img/platter/veg.jpeg",
+        "des":"Combination of grilled panner, fried cashew nut mushroom and potato"
+        ,
+        "price":840
+
+    },
+    {
+        "id":2,
+        "name":"Veg momo platter",
+        "src":"assets/img/platter/vegMomo.jpeg",
+        "des":"combination of steam, kothey, fried and chilli"
+        ,
+        "price":735
+    },
+    {
+        "id":3,
+        "name":"Chicken Momo Platter",
+        "src":"assets/img/platter/chickenMomo.jpeg",
+        "des":"combination of steam, kothey, fried and chilli"
+        ,
+        "price":695
+    },
+    {
+        "id":4,
+        "name":"Chicken Platter",
+        "src":"assets/img/platter/chicken.jpeg",
+        "des":"combination of traditional cooking of dishes"
+        ,
+        "price":985
+    },
+    {
+        "id":5,
+        "name":"Fish Platter",
+        "src":"assets/img/platter/fish.jpeg",
+        "des":"combination of prawn, fish in Neaplis style"
+        ,
+        "price":1635
+    },
+    {
+        "id":6,
+        "name":"Mixed Platter",
+        "src":"assets/img/platter/mixed.jpeg",
+        "des":"combination of veg,chicken and fish"
+        ,
+        "price":1360
+    },
+    {
+        "id":7,
+        "name":"Tandoori Platter",
+        "src":"assets/img/platter/tandoori.jpeg",
+        "des":"combination of tandooru, kebab and tikas"
+        ,
+        "price":1295
+    },
+    {
+        "id":8,
+        "name":"Newari Khaja Set",
+        "src":"assets/img/platter/newariKhaja.jpeg",
+        "des":"combination of typical newari snacks"
+        ,
+        "price":780
+    },
+    {
+        "id":9,
+        "name":"Fruits Platter",
+        "src":"assets/img/platter/fruitePlatter.jpeg",
+        "des":"combination of different seasonal fruits"
+        ,
+        "price":690
+    }
+]

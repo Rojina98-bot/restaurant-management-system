@@ -1,0 +1,50 @@
+[{
+    "id":1,
+    "name":"All Pollo(Chicken)",
+    "src":"assets/img/pizza/allPollo.jpeg",
+    "des":"Grilled chicken, cheese, tomato herbs"
+    ,
+    "price":675
+},
+ 
+ {
+    "id":2,
+    "name":"Mixed Sea Food",
+    "src":"assets/img/pizza/mixedSeaFood.jpeg",
+    "des":"Assorted sea foods, cheese, tomato herbs"
+    ,
+    "price":685
+},
+ {
+    "id":3,
+    "name":"Grilled Vegetable",
+    "src":"assets/img/pizza/grilledVegetable.jpeg",
+    "des":"Grilled vegetable cheese, tomato herbs"
+    ,
+    "price":560
+},
+ {
+    "id":4,
+    "name":"Mushroom",
+    "src":"assets/img/pizza/mushroom.jpeg",
+    "des":"Grilled mushroom, cheese, tomato and herbs"
+    ,
+    "price":665
+},
+ {
+    "id":5,
+    "name":"Margherita",
+    "src":"assets/img/pizza/margherita.jpeg",
+    "des":"cheese, tomato and oregano"
+    ,
+    "price":490
+},
+ {
+    "id":6,
+    "name":"Panner Tika",
+    "src":"assets/img/pizza/paneerTika.jpeg",
+    "des":"Topping with clay oven cooked Paneer, cheese, tomato herbs"
+    ,
+    "price":685
+}
+]

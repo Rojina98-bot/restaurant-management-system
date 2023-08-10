@@ -1,0 +1,172 @@
+[
+    {
+        "id":1,
+        "name":"Veg Platter",
+        "src":"assets/img/platter/veg.jpeg",
+        "des":"Combination of grilled panner, fried cashew nut mushroom and potato"
+
+    },
+    {
+        "id":2,
+        "name":"Veg momo platter",
+        "src":"assets/img/platter/vegMomo.jpeg",
+        "des":"combination of steam, kothey, fried and chilli"
+    },
+    {
+        "id":3,
+        "name":"Chicken Momo Platter",
+        "src":"assets/img/platter/chickenMomo.jpeg",
+        "des":"combination of steam, kothey, fried and chilli"
+    },
+    {
+        "id":4,
+        "name":"Chicken Platter",
+        "src":"assets/img/platter/chicken.jpeg",
+        "des":"combination of traditional cooking of dishes"
+    },
+    {
+        "id":5,
+        "name":"Fish Platter",
+        "src":"assets/img/platter/fish.jpeg",
+        "des":"combination of prawn, fish in Neaplis style"
+    },
+    {
+        "id":6,
+        "name":"Mixed Platter",
+        "src":"assets/img/platter/mixed.jpeg",
+        "des":"combination of veg,chicken and fish"
+    },
+    {
+        "id":7,
+        "name":"Tandoori Platter",
+        "src":"assets/img/platter/tandoori.jpeg",
+        "des":"combination of tandooru, kebab and tikas"
+    },
+    {
+        "id":8,
+        "name":"Newari Khaja Set",
+        "src":"assets/img/platter/newariKhaja.jpeg",
+        "des":"combination of typical newari snacks"
+    },
+    {
+        "id":9,
+        "name":"Fruits Platter",
+        "src":"assets/img/platter/fruitePlatter.jpeg",
+        "des":"combination of different seasonal fruits"
+    },
+    {
+        "id":10,
+        "name":"Lasangna Alle Verdure",
+        "src":"assets/img/touchOfItaly/LasangnaAlleVerdure.jpeg",
+        "des":"Oven baked layers of fresh potato with cheese, tomato and seasonal vegetables"
+    },
+    {
+        "id":11,
+        "name":"Lasagna Bolognese",
+        "src":"assets/img/touchOfItaly/lasagnaBolognese.jpeg",
+        "des":"Oven baked layers of fresh potato with cheese, tomato and seasonal vegetables"
+    },
+    {
+        "id":12,
+        "name":"Spaghetti/ Penne Pasta",
+        "src":"assets/img/touchOfItaly/spaghetti.jpeg",
+        "des":"Choice of carbona, Arabbiato or chicken Bolonoise server with garlic bread "
+    },
+     {
+        "id":13,
+        "name":"All Pollo(Chicken)",
+        "src":"assets/img/pizza/allPollo.jpeg",
+        "des":"Grilled chicken, cheese, tomato herbs"
+    },
+     
+     {
+        "id":14,
+        "name":"Mixed Sea Food",
+        "src":"assets/img/pizza/mixedSeaFood.jpeg",
+        "des":"Assorted sea foods, cheese, tomato herbs"
+    },
+     {
+        "id":15,
+        "name":"Grilled Vegetable",
+        "src":"assets/img/pizza/grilledVegetable.jpeg",
+        "des":"Grilled vegetable cheese, tomato herbs"
+    },
+     {
+        "id":16,
+        "name":"Mushroom",
+        "src":"assets/img/pizza/mushroom.jpeg",
+        "des":"Grilled mushroom, cheese, tomato and herbs"
+    },
+     {
+        "id":17,
+        "name":"Margherita",
+        "src":"assets/img/pizza/margherita.jpeg",
+        "des":"cheese, tomato and oregano"
+    },
+     {
+        "id":18,
+        "name":"Panner Tika",
+        "src":"assets/img/pizza/paneerTika.jpeg",
+        "des":"Topping with clay oven cooked Paneer, cheese, tomato herbs"
+    },
+    {
+        "id":19,
+        "name":"Vegetable thali set",
+        "src":"assets/img/NepaliIndian/vegThali.jpeg",
+        "des":"Freshly homemade veg set meal served with Rice or Dhido"
+    },
+    {
+        "id":20,
+        "name":"Chicken/fish thali set/dhido",
+        "src":"assets/img/NepaliIndian/chickenFishThali.jpeg",
+        "des":"freshly homemade combo set meal with chicken/fish"
+    },
+    {
+        "id":21,
+        "name":"Mutton Curry",
+        "src":"assets/img/NepaliIndian/muttonCurry.jpeg",
+        "des":"Freshly homemade combo set meal served with Rice or Dhido"
+    },
+    {
+        "id":22,
+        "name":"Fish Curry",
+        "src":"assets/img/NepaliIndian/fishCurry.jpeg",
+        "des":"Freshly homemade fish with local spices"
+    },
+    {
+        "id":23,
+        "name":"Chicken Curry",
+        "src":"assets/img/NepaliIndian/chickenCurry.jpeg",
+        "des":"Freshly homemade chicken with local spices"
+    },
+    {
+        "id":24,
+        "name":"Paneer Mattar Curry",
+        "src":"assets/img/NepaliIndian/pannerMattarCurry.jpeg",
+        "des":"Freshly homemade panner, peas with local spices"
+    },
+    {
+        "id":25,
+        "name":"Palak Paneer",
+        "src":"assets/img/NepaliIndian/palakPanner.jpeg",
+        "des":"Freshly homemade spinach and cottage cheese spices"
+    },
+    {
+        "id":26,
+        "name":"Paneer Butter Masala",
+        "src":"assets/img/NepaliIndian/paneerButterMasala.jpeg",
+        "des":"Char grilled panner cooked in rich tomato and nuts gravy"
+    },
+    {
+        "id":27,
+        "name":"Chicken Butter Masala",
+        "src":"assets/img/NepaliIndian/chickenButterMasala.jpeg",
+        "des":"Char grilled chicken cooked in rich tomato and nuts gravy"
+    }
+   
+   
+
+    
+    
+
+]

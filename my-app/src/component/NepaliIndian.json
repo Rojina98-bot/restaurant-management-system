@@ -1,0 +1,79 @@
+[{
+    "id":1,
+    "name":"Vegetable thali set",
+    "src":"assets/img/NepaliIndian/vegThali.jpeg",
+    "des":"Freshly homemade veg set meal served with Rice or Dhido"
+    ,
+    "price":515
+},
+{
+    "id":2,
+    "name":"Chicken/fish thali set/dhido",
+    "src":"assets/img/NepaliIndian/chickenFishThali.jpeg",
+    "des":"freshly homemade combo set meal with chicken/fish"
+    ,
+    "price":650
+},
+{
+    "id":3,
+    "name":"Mutton Curry",
+    "src":"assets/img/NepaliIndian/muttonCurry.jpeg",
+    "des":"Freshly homemade combo set meal served with Rice or Dhido"
+    ,
+    "price":825
+},
+{
+    "id":4,
+    "name":"Fish Curry",
+    "src":"assets/img/NepaliIndian/fishCurry.jpeg",
+    "des":"Freshly homemade fish with local spices"
+    ,
+    "price":725
+},
+{
+    "id":5,
+    "name":"Chicken Curry",
+    "src":"assets/img/NepaliIndian/chickenCurry.jpeg",
+    "des":"Freshly homemade chicken with local spices"
+    ,
+    "price":725
+},
+{
+    "id":6,
+    "name":"Paneer Mattar Curry",
+    "src":"assets/img/NepaliIndian/pannerMattarCurry.jpeg",
+    "des":"Freshly homemade panner, peas with local spices"
+    ,
+    "price":680
+},
+{
+    "id":7,
+    "name":"Palak Paneer",
+    "src":"assets/img/NepaliIndian/palakPanner.jpeg",
+    "des":"Freshly homemade spinach and cottage cheese spices"
+    ,
+    "price":675
+},
+{
+    "id":8,
+    "name":"Paneer Butter Masala",
+    "src":"assets/img/NepaliIndian/paneerButterMasala.jpeg",
+    "des":"Char grilled panner cooked in rich tomato and nuts gravy"
+    ,
+    "price":720
+},
+{
+    "id":9,
+    "name":"Chicken Butter Masala",
+    "src":"assets/img/NepaliIndian/chickenButterMasala.jpeg",
+    "des":"Char grilled chicken cooked in rich tomato and nuts gravy"
+    ,
+    "price":720
+}
+]
+
+
+
+
+
+

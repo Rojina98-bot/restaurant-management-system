@@ -1,0 +1,128 @@
+*{
+    
+    box-sizing: border-box;
+}
+legend, input{
+    all:initial;
+}
+
+
+.body{
+    width:100%;
+   /* baclegendkground-color:rgb(8, 151, 151);*/
+   overflow:hidden;
+   font-size:1em;
+  
+}
+.container{
+    min-width:0%;
+    background-color:white;
+    margin :5% auto;
+    width:30%;
+    padding:2%;
+    border: 1px solid rgb(134, 118, 118);
+    
+
+}
+.container p{
+    text-align:center;
+    color:rgb(8, 151, 151);
+    
+}
+.heading{
+    font-size:1.5em;
+}
+.container+p{
+    font-size:2em;
+}
+.input{
+    /*padding:3%;*/
+    min-width:0%;
+    position:relative;
+    bottom:0%;
+    padding: 0%;
+    /*margin-top:2%;*/
+    width:80%;
+    text-align:left;
+    border:none;
+    /*border:1px solid rgba(221, 47, 47, 0.952);*/
+   overflow:hidden;
+   margin:auto;
+   display:flex;
+  
+}
+.form:focus{
+    background:transparent;
+}
+.input:focus{
+
+    outline:none;
+}
+
+.checkbox[type="checkbox"]
+{
+    appearance: checkbox !important;
+}
+.autocompleteInput::selection{
+    background-color:transparent;
+}
+.userType{
+    width: 80%;
+    display:flex;
+    margin:auto;
+    border:1px solid black;
+
+}
+.sign{
+    margin:auto;
+    margin-top:5%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding:5% 0%;
+    width:30%;
+    min-width:30%;
+    height:5%;
+    background-color:rgb(8, 151, 151);
+    border-radius:10px;
+    color:white;
+    border:none;
+}
+.checkbox{
+    margin:0% 10%;
+   
+
+}
+.form{
+    position:relative;
+    min-width:0%;
+    width: 100%;
+}
+.fieldset{
+    position:relative;
+    padding: 0% 0%;
+    margin:6% auto;
+    border: 1px solid rgb(8, 6, 6);
+    border-top:1px solid rgb(8, 6, 6);
+    width:80%;
+    z-index:1;
+    min-width:0%;
+}
+.legend {
+    padding:0%;
+    border:none;
+    font-size: 0.8em;
+   /*overflow:-moz-hidden-unscrollable;*/
+}
+.legend::-webkit-scrollbar{
+
+    display:none;
+}
+.label{
+    display:block;
+}
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover, 
+.input:-webkit-autofill:focus{
+    -webkit-box-shadow: 0 0 0 40px white inset !important;
+}

@@ -1,0 +1,34 @@
+/*img{
+    all:revert;
+}*/
+.img
+{
+   
+    margin:0% 5%;
+    width:25%;
+    height:25%;
+}
+.logo{
+    
+    border:none;
+    /*background-color:rgb(201, 204, 207);*/
+}
+.menu
+{
+    color:#0d6efd;
+    font-weight:bold;
+    size:2em;
+   /* padding-left:5%;*/
+}
+.position{
+    max-width:inherit;
+    width:inherit;
+    position:fixed;
+    min-width:0;
+    margin-right:-50%;
+}
+/*@media screen and (max-width:461px){
+    div.position{
+        display:none;
+    }
+}*/
