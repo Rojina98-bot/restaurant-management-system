@@ -1,108 +1,120 @@
 import React, {useEffect,useState} from 'react';
 import styles from './order.module.css';
-import logo from './images/logo.png';
-import 'bootstrap-icons/font/bootstrap-icons.css';
 import axios from 'axios';
 import SideBar from '../sideBar/sideBar';
-import {Link} from 'react-router-dom';
 const Order=()=>{
   const [values,setValues]=useState([]);
-  const [token,setToken]=useState('');
-  
-  /*setToken(storedToken);*/
-
-  /*const navigate=useNavigate();*/
-  /*const storedToken=localStorage.getItem('token');*/
-    /*setToken(storedToken);*/
+  axios.defaults.withCredentials=true;
   useEffect(()=>{
-    const storedToken=localStorage.getItem('token');
-    setToken(storedToken);
-    console.log(token);
-    
-  },[]);
-  /*useEffect(() => {
-    console.log('Token:', token);
-  }, [token]);*/
- /* useEffect(()=>{
-  const fetchData=async()=>{
-    try{
-    const res=await axios.post("http://localhost:8000/dashboard",{},{
-      headers:{Authorization:`Bearer${token}`},});
-      if(res.data.Status==="Success"){
-        setValues(res.data.Result);
-      }
-}
-catch(error){
-  console.log(error);
-}
-  }
-  fetchData();
-  },[]);
-  
-  */
-  /*useEffect(()=>{
-    try{
-      const res=await axios.get("http://localhost:8000/dashboard",{
-
-      },{headers:{Authorization:`Bearer${token}`},},)
-    }
-    catch(e){
-      console.log(e);
-    }
-    if(res.data.Status="Success"){
-      setValues(res.data.Result);
-    })*/
-    useEffect(()=>{
-      console.log(token);
-    axios.get('http://localhost:8000/dashboard',
-     { headers:{ 
-      Authorization: `Bearer ${token}`,},
-    })
+    axios.get('http://localhost:8000/orderList')
     .then(res=>{
-      if(res.data.Status==='Success'){
-        console.log(res.data.Result);
-        setValues(res.data.Result);
-      }
-    
-    
-    })
+      if(res.data.Status==="Success"){
+        setValues(res.data.fullOrderLists)
+        console.log(res.data.fullOrderLists);
+        console.log(values);
+    }})
     .catch(err=>console.log(err));
-  },[token]);
-  
 
+  },[])
+  if (values.length>0){
+  const orders={};
+  values.forEach((value)=>{
+    const {orderId,TotalPrice,OrderStatus, ...rest}=value;
+    if(!orders[orderId]){
+        orders[orderId]={
+            orderId,
+            TotalPrice,
+            OrderStatus,
+            items:[],
+        };
+    }
+    orders[orderId].items.push(rest);
+  });
+  const orderArray=Object.values(orders);
+
+
+ 
     return(
       <div className={`container-fluid ${styles.body}`}>
   <div className="row flex-nowrap">
    <SideBar/>
-    <table className="table table-striped py-3">
-      <thead>
-        <tr>
-          <th colSpan="3" >Orders</th>
-        </tr>
-        </thead>
-        <tbody>
-        {/*<tr>
-          <td>food</td>
-          <td>Price</td>
-          <td>edit and delete button</td>
-</tr>*/}
-          {values.map((customers,index)=>{
-            return(
-            <tr key={index}>
-              <td>{customers.order_name}</td>
-            </tr>
-            );
-          })}
-      </tbody>
-    </table>
+        <div className='col-md-6 mx-3'>
+        <table className={`table table-bordered border-primary mt-4  ${styles.fixedWidthTable} `} style={{width:"75%"}}>
+                     {orderArray && orderArray.map((record1,index1)=>{
+                          return(
+                            <tr key={index1}>
+                              {!record1.OrderStatus ? (
+                                <>
+                                <thead className='col-md-6'>
+                                    
+                                  <th className='col-md-6' >OrderID:{record1.orderId}</th>
+                                    
+                                </thead>
+                                <tbody className='col-md-6'>
+                                    <tr>
+                                        {record1.items && record1.items.map((record2,index2)=>{
+                                            return(
+                                            <tr key={index2}>
+                                                <table className='table table-bordered my-3' style={{width:"75%"}}>
+                                                    <thead>
+                                                        <tr>
+                                                            <th className='col-md-1' >SN</th>
+                                                            <th className='col-md-4' >Name</th>
+                                                            <th className='col-md-2' >Quantity</th>
+                                                            <th className='col-md-3' >Price</th>
+                                                            <th className='col-md-3' >SubTotal</th>
+                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td className='col-md-1'>{index2+1}</td>
+                                                            <td className='col-md-4'>{record2.OrderName}</td>
+                                                            <td className='col-md-2'>{record2.OrderQuantity}</td>
+                                                            <td className='col-md-3'>{record2.OrderPrice}</td>
+                                                            <td className='col-md-3'>{record2.SubTotal}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </tr>)})}
+                                    </tr>
+                                  </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th colspan='3'>Total Price: {record1.TotalPrice}</th>
+                                    </tr>
+                                </tfoot>
+                                </>
+                              ):null}
+                            </tr>
+                         ) })}
+                       
+                    </table>  
+                    </div>
+                  </div>
+                   
+    
   </div>
-</div>
+  
+  
+
 
 
     
   
 
   )
+}
+else{
+  return(
+  <div className={`container-fluid ${styles.body}`}>
+      <div className="row flex-nowrap">
+        <SideBar />
+        <p>Loading...</p> {/* Show a loading message or spinner */}
+      </div>
+    </div>
+    );
+}
 
 }
 export default Order;

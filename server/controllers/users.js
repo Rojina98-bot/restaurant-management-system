@@ -1,26 +1,40 @@
 import User from '../models/users.js';
-
+import bcrypt from 'bcrypt';
 
 export const UserCreate =async(req,res,next)=>{
-    const newUser=new User(req.body)
-    try{
-        const savedUser=await newUser.save()
-        res.status(200).json(savedUser)
-    }
-    catch(err){
-       // res.status(500).json(err)
-       next(err);
-    }
-}
-
+    const {UserName,UserAddress,UserNumber,UserEmail,UserPassword,isAdmin}=req.body;
+    const salt=bcrypt.genSaltSync(10);
+    const hash=bcrypt.hashSync(UserPassword,salt);
+     try{
+         const CreateUser=await User.create({
+            UserName:UserName,
+            UserAddress:UserAddress,
+            UserNumber:UserNumber,
+            UserEmail:UserEmail,
+            UserPassword:hash,
+            isAdmin:isAdmin
+         })
+         
+         if(CreateUser===null)
+         {
+            return res.status(500).json({Status:"Error"})
+         }
+         else{
+            return res.status(200).json({Status:"Success"})}
+        }
+     catch(err){
+        next(err);
+     }
+ }
 
 export const UserUpdate =async(req,res,next)=>{
     try{
-        const UserId=req.params.id;
+        const userId=req.params.id;
         const updateData=req.body;
+        console.log(req.body);
         const affectedRowCount=await User.update(updateData,{
             where:{
-                id:UserId},
+                UserID:userId},
                 returning :true,
             
         });
@@ -37,7 +51,6 @@ export const UserUpdate =async(req,res,next)=>{
 }
 
     catch(err){
-        //res.status(500).json({message:'internal server error'});
         next(err);
     }
 }
@@ -46,7 +59,7 @@ export const UserDelete =async(req,res,next)=>{
     try{
         const UserId=req.params.id;
         const reply=await User.destroy({
-            where:{id:UserId
+            where:{UserID:UserId
             },
         });
         if(reply===0)
@@ -61,8 +74,47 @@ export const UserDelete =async(req,res,next)=>{
     }
     catch(err)
     {
-        //res.status(500).json({message:'internal server error'});
         next(err);
     }
 }
+export const UserGet=async(req,res,next)=>{
+    const userId=req.params.id;
+    try{
+        const user=await User.findOne({
+            where:{
+               UserID:userId
 
+            },
+                attributes:{exclude:['password']}
+            
+        }
+
+        );
+        if(user===null)
+        return res.status(500).json({Status:"Error"});
+        else
+        return res.status(200).json({
+            Status:"Success",result:user
+        });
+    }
+    catch(err){
+    next(err);
+    }
+}
+export const UserGetAll=async(req,res,next)=>{
+    try{
+        const users=await User.findAll({
+            attributes:{exclude:['UserPassword']},
+            order:[['UserID','DESC']]
+        });
+        if(users===null){
+            return res.status(500).json({Status:"Error"});
+        }
+        else
+        res.status(200).json({Status:"Success",result:users});
+        
+    }
+    catch(err){
+        next(err);
+    }
+}

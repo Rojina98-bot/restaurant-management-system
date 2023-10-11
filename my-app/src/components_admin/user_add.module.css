@@ -1,0 +1,4 @@
+.checkbox[type="checkbox"]
+{
+    appearance: checkbox !important;
+}

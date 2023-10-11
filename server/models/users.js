@@ -1,5 +1,5 @@
 
-import { Sequelize,Model,DataTypes} from 'sequelize';
+import { Sequelize,DataTypes} from 'sequelize';
 import config from '../config/dbconfig.js';
 const sequelize=new Sequelize(config.DB,config.USER,config.PASSWORD,{
     host:config.HOST,
@@ -8,28 +8,28 @@ const sequelize=new Sequelize(config.DB,config.USER,config.PASSWORD,{
 const User=sequelize.define('User',{
 
 
-    id:{
+    UserID:{
         type:DataTypes.INTEGER,
         autoIncrement:true,
         primaryKey:true
     },
-    name:{
+    UserName:{
         type:DataTypes.STRING,
         allowNull:false
     },
-    address:{
+    UserAddress:{
         type:DataTypes.STRING,
         allowNull:false
     },
-    number:{
+    UserNumber:{
         type:DataTypes.STRING,
         allowNull:false
     },
-    email:{
+    UserEmail:{
         type:DataTypes.STRING,
         allowNull:false
     }
-    , password:{
+    , UserPassword:{
         type:DataTypes.STRING,
         allowNull:false
     },
@@ -38,6 +38,8 @@ const User=sequelize.define('User',{
     }
 
     
+},{
+    timestamps:true
 });
 await User.sync();
 export default User;

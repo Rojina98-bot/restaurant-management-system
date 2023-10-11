@@ -1,37 +1,49 @@
 import User from '../models/users.js';
-
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 export const LoginOp =async(req,res,next)=>{
     try{
+        let isPasswordCorrect=false;
         const email=req.body.email;
         const password=req.body.password;
-        const query=await User.findAll({
+        const query=await User.findOne({
         where:{
-            email:email,
-            password:password,
+            UserEmail:email,
+            
         },
         });
-        if(query!==null)
+        if(query!==null){
+        isPasswordCorrect=await bcrypt.compare(password,query.UserPassword);}
+        console.log(isPasswordCorrect);
+
+        if(query===null || !isPasswordCorrect)
         {
-            return res.status(200).json({Status:"Success"});
+            return res.json({Status:"Error", Error:"Wrong Password or Email"});
         }
+
         else
+        
         {
-            return res.status(500).json({Status:"Error"});
+            const token=jwt.sign({id:query.UserID,isAdmin:query.isAdmin},process.env.JWT,{expiresIn:'1d'});
+            return res.cookie("access_token",token,{httpOnly:true,}).status(200).json({Status:"Success"});
+          
         }
     }
     catch(err){
-        next(err);
+    next(err);
     }
 }
 
 export const SignOp=async(req,res,next)=>{
     try{
-        const query=await User.create({name:req.body.name,
-        address:req.body.address,
-        number:req.body.number,
-        email:req.body.email,
-        password:req.body.password,
-        isAdmin:false
+        const salt=bcrypt.genSaltSync(10);
+        const hash=bcrypt.hashSync(req.body.password,salt);
+        const query=await User.create({UserName:req.body.name,
+        UserAddress:req.body.address,
+        UserNumber:req.body.number,
+        UserEmail:req.body.email,
+        UserPassword:hash,
+        isAdmin:req.body.isAdmin
     });
         console.log(query);
         if(query===null){

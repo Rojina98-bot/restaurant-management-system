@@ -36,8 +36,7 @@
     font-weight:bolder;
     color:black;
 }
-.menuBody{
-    width:fit-content;
+.itemBody{
     background-color:white;
 }
 .body{
@@ -57,4 +56,13 @@ img{
     width:80%;
     height:230px;;
     background-size:cover;
+}
+/*.hidden{
+    width:fit-content;
+}*/
+.fixed{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0
 }

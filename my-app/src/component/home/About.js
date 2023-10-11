@@ -11,7 +11,6 @@ const About=()=>{
       <span className="site-heading-lower">Business Casual</span>
     </h1>
   </header>
-  {/* Navigation*/}
   <nav className="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div className="container">
       <a
