@@ -5,8 +5,10 @@ after cloning, run:
 to install all packages
 
 
-get inside server.js and connect to your mysql 
+get inside server.js and connect to your mysql
 ![my_sql](./pic1.png)
+
+change the HOST,NAME,PASSWORD and DATABASE inside the .envg file
 
 check the tables for database from /server/models
 
